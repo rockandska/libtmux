@@ -68,7 +68,7 @@ pytest-cov = [
 ]
 
 ### Format ###
-black = {version="*", python=">=3.6"}
+black = {version="*", python=">=3.6.2,<4.0"}
 isort = [
   {version="<5", python="<3.6"},
   {version="*", python=">=3.6"}
@@ -78,7 +78,10 @@ isort = [
 flake8 = "*"
 
 ### Deploy ###
-twine = "*"
+twine = [
+  {version="<2", python="<3"},
+  {version="*", python=">=3"}
+]
 
 [tool.poetry.extras]
 docs = ["sphinx", "recommonmark", "sphinx-issues", "alagitpull"]

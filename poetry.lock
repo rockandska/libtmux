@@ -477,6 +477,9 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.dependencies]
+typing = {version = ">=3.5.3", markers = "python_version < \"3.5\""}
+
 [[package]]
 name = "packaging"
 version = "20.4"
@@ -1036,6 +1039,25 @@ dev = ["argopt", "py-make (>=0.1.0)", "pydoc-markdown", "twine"]
 
 [[package]]
 name = "twine"
+version = "1.15.0"
+description = "Collection of utilities for publishing packages on PyPI"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+pkginfo = ">=1.4.2"
+readme-renderer = ">=21.0"
+requests = ">=2.5.0,<2.15 || >2.15,<2.16 || >2.16"
+requests-toolbelt = ">=0.8.0,<0.9.0 || >0.9.0"
+tqdm = ">=4.14"
+
+[package.extras]
+keyring = ["keyring"]
+with-blake2 = ["pyblake2"]
+
+[[package]]
+name = "twine"
 version = "3.2.0"
 description = "Collection of utilities for publishing packages on PyPI"
 category = "dev"
@@ -1076,6 +1098,9 @@ description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.dependencies]
+typing = {version = ">=3.7.4", markers = "python_version < \"3.5\""}
 
 [[package]]
 name = "urllib3"
@@ -1132,7 +1157,7 @@ test = []
 [metadata]
 lock-version = "1.1"
 python-versions = "~2.7 || ^3.5"
-content-hash = "95866f305f4fbbcfd5c1b7f4a965603e9fc49b7bcd88b11b8104bd08d30dad16"
+content-hash = "07a60912ddc32062b85f8d975d21b7d5a79fba57a1e5b2f94a3129a320a89907"
 
 [metadata.files]
 alabaster = [
